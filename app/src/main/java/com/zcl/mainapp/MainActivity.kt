@@ -1,8 +1,10 @@
 package com.zcl.mainapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.yuxue.imageloadutils.likeCache.ImageLoader
+import com.zcl.mainapp.plugs.Main2Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         var imageLoad4 = com.yuxue.imageloadutils.ImageCache.ImageLoader()
         imageLoad4.displayImage("http://www.juqu8.cn/uploadfiles/20170719/2017071915070468.jpg", iv_main4)
+
+
+
+        iv_main4.setOnClickListener { v -> startActivity(Intent(this, Main2Activity::class.java)) }
 
     }
 
